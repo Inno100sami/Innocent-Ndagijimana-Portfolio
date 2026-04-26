@@ -15,7 +15,7 @@ This repository contains the professional CV and interactive portfolio of **Inno
 
 Simply open `Innocent_Ndagijimana_Portfolio.html` in a web browser — no server or installation needed. The page is fully self-contained with embedded CSS and JavaScript.
 
-**Live version:** [inno100sami.github.io/Innocent-Ndagijimana-Portfolio](https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/)
+**Live version:** [inno100sami.github.io/Innocent-Ndagijimana-Portfolio](https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/Innocent_Ndagijimana_Portfolio.html)
 
 ---
 

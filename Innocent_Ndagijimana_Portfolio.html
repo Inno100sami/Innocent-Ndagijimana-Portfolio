@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innocent Ndagijimana | NRW Specialist &amp; Water Asset Management Engineer</title>
+<style>
+  :root {
+    --navy:  #1B3A6B;
+    --teal:  #0E7C86;
+    --teal2: #12969F;
+    --gold:  #D4A017;
+    --light: #EDF4F5;
+    --slate: #4A4A4A;
+    --white: #FFFFFF;
+    --bg:    #F5F8FA;
+    --card:  #FFFFFF;
+    --border:#D0E4E8;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--slate); line-height:1.6; }
+  nav {
+    position: fixed; top:0; width:100%; background: var(--navy);
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 0 40px; height:56px; z-index:1000; box-shadow:0 2px 12px rgba(0,0,0,.3);
+  }
+  .nav-brand { color:#A8C8D8; font-size:14px; font-weight:600; letter-spacing:1px; text-transform:uppercase; }
+  .nav-links { display:flex; gap:28px; list-style:none; }
+  .nav-links a { color:#A8C8D8; text-decoration:none; font-size:13px; font-weight:500; transition:.2s; }
+  .nav-links a:hover { color:var(--white); }
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0d2347 55%, #0a5a63 100%);
+    padding: 130px 40px 80px; text-align:center; position:relative; overflow:hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(14,124,134,.35) 0%, transparent 65%);
+  }
+  .hero-inner { position:relative; max-width:860px; margin:0 auto; }
+  .hero-badge {
+    display:inline-block; background:rgba(14,124,134,.25); border:1px solid rgba(14,124,134,.6);
+    color:#7FD8E0; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase;
+    padding:6px 18px; border-radius:20px; margin-bottom:20px;
+  }
+  .hero h1 { font-size:52px; font-weight:700; color:var(--white); line-height:1.1; margin-bottom:10px; }
+  .hero h1 span { color:#7FD8E0; }
+  .hero-title { font-size:18px; color:#A8C8D8; margin-bottom:24px; font-weight:400; }
+  .hero-tagline {
+    font-size:15px; color:#7FD8E0; max-width:640px; margin:0 auto 32px;
+    border-left:3px solid var(--teal); padding-left:16px; text-align:left;
+  }
+  .hero-contacts { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-bottom:36px; }
+  .hero-contacts a {
+    color:#A8C8D8; text-decoration:none; font-size:13px; display:flex; align-items:center; gap:6px;
+    background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); padding:7px 14px; border-radius:20px; transition:.2s;
+  }
+  .hero-contacts a:hover { background:rgba(14,124,134,.3); color:var(--white); }
+  .hero-portfolio {
+    margin: 0 auto 30px; max-width:500px;
+    background: linear-gradient(135deg,rgba(212,160,23,.18),rgba(14,124,134,.18));
+    border: 1.5px solid var(--gold); border-radius:28px; padding:10px 24px;
+    display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap;
+  }
+  .hero-portfolio span { color:#FFD97A; font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+  .hero-portfolio a {
+    color:var(--white); text-decoration:none; font-size:13px; font-weight:600;
+    border-bottom:1px dotted rgba(255,255,255,.4); transition:.2s;
+  }
+  .hero-portfolio a:hover { color:var(--gold); border-bottom-color:var(--gold); }
+  .hero-stats { display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
+  .stat { text-align:center; }
+  .stat-num { font-size:34px; font-weight:700; color:var(--gold); line-height:1; }
+  .stat-label { font-size:12px; color:#A8C8D8; text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+  section { padding: 72px 40px; max-width:1100px; margin:0 auto; }
+  .section-header { text-align:center; margin-bottom:52px; }
+  .section-label { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+  .section-title { font-size:32px; font-weight:700; color:var(--navy); }
+  .section-line { width:50px; height:4px; background:linear-gradient(90deg,var(--teal),var(--teal2)); border-radius:2px; margin:14px auto 0; }
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; }
+  .about-text p { font-size:15px; line-height:1.8; color:var(--slate); margin-bottom:14px; }
+  .about-text p strong { color:var(--navy); }
+  .about-highlights { display:flex; flex-direction:column; gap:14px; }
+  .highlight-card {
+    background:var(--card); border:1px solid var(--border); border-left:4px solid var(--teal);
+    border-radius:8px; padding:16px 20px;
+  }
+  .highlight-card .hl-num { font-size:26px; font-weight:700; color:var(--teal); }
+  .highlight-card .hl-text { font-size:13px; color:var(--slate); }
+  .comp-bg { background:var(--light); padding:72px 0; }
+  .comp-inner { max-width:1100px; margin:0 auto; padding:0 40px; }
+  .comp-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:20px; }
+  .comp-card {
+    background:var(--white); border-radius:10px; padding:22px 18px; text-align:center;
+    border-top:4px solid var(--teal); box-shadow:0 2px 12px rgba(0,0,0,.06); transition:.25s;
+  }
+  .comp-card:hover { transform:translateY(-4px); box-shadow:0 6px 24px rgba(14,124,134,.15); }
+  .comp-icon { font-size:28px; margin-bottom:12px; }
+  .comp-name { font-size:13px; font-weight:600; color:var(--navy); }
+  .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .skill-group { background:var(--card); border-radius:10px; padding:24px; border:1px solid var(--border); }
+  .skill-group h4 { font-size:13px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; border-bottom:1px solid var(--border); padding-bottom:8px; }
+  .skill-item { margin-bottom:14px; }
+  .skill-label { display:flex; justify-content:space-between; font-size:13px; color:var(--slate); margin-bottom:5px; }
+  .skill-bar { background:#E2EDF0; border-radius:6px; height:8px; overflow:hidden; }
+  .skill-fill { height:100%; border-radius:6px; background:linear-gradient(90deg,var(--teal),var(--teal2)); transition:width 1.5s ease; }
+  .tag-list { display:flex; flex-wrap:wrap; gap:8px; }
+  .tag { background:var(--light); color:var(--teal); font-size:12px; font-weight:600; padding:4px 11px; border-radius:14px; border:1px solid #C0DDE2; }
+  .timeline { position:relative; padding-left:32px; }
+  .timeline::before { content:''; position:absolute; left:10px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--teal), var(--navy)); border-radius:2px; }
+  .tl-item { position:relative; margin-bottom:40px; }
+  .tl-dot {
+    position:absolute; left:-38px; top:6px; width:18px; height:18px;
+    background:var(--white); border:3px solid var(--teal); border-radius:50%;
+    box-shadow:0 0 0 4px rgba(14,124,134,.15);
+  }
+  .tl-dot.current { background:var(--teal); }
+  .tl-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:22px 26px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
+  .tl-header { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+  .tl-title { font-size:16px; font-weight:700; color:var(--navy); }
+  .tl-period { font-size:12px; color:var(--teal); font-weight:600; background:var(--light); padding:3px 10px; border-radius:12px; white-space:nowrap; }
+  .tl-org { font-size:13px; color:var(--teal2); font-weight:600; margin-bottom:4px; }
+  .tl-loc { font-size:12px; color:#888; margin-bottom:12px; }
+  .tl-bullets { list-style:none; padding:0; }
+  .tl-bullets li { font-size:13px; color:var(--slate); padding:4px 0 4px 18px; position:relative; line-height:1.6; }
+  .tl-bullets li::before { content:'▸'; position:absolute; left:0; color:var(--teal); font-size:11px; top:5px; }
+  .tl-achievement { background:linear-gradient(135deg,#FFF8E7,#FFFDE0); border:1px solid #F0D070; border-radius:6px; padding:8px 14px; margin-top:10px; font-size:13px; color:#7A5A00; }
+  .tl-achievement::before { content:'⭐ '; }
+  .projects-grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; }
+  .proj-card {
+    background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,.06); transition:.25s;
+  }
+  .proj-card:hover { transform:translateY(-5px); box-shadow:0 8px 28px rgba(14,124,134,.15); }
+  .proj-header { background:linear-gradient(135deg,var(--navy),#0d4a6b); padding:22px 24px; }
+  .proj-icon { font-size:26px; margin-bottom:10px; }
+  .proj-title { font-size:16px; font-weight:700; color:var(--white); margin-bottom:4px; }
+  .proj-tech { font-size:11px; color:#7FD8E0; }
+  .proj-body { padding:20px 24px; }
+  .proj-desc { font-size:13px; color:var(--slate); line-height:1.7; margin-bottom:14px; }
+  .proj-tags { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:14px; }
+  .proj-tag { background:var(--light); color:var(--teal); font-size:11px; font-weight:600; padding:3px 10px; border-radius:10px; }
+  .proj-links { display:flex; gap:14px; flex-wrap:wrap; }
+  .proj-link { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; color:var(--teal); text-decoration:none; }
+  .proj-link:hover { color:var(--navy); }
+  .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .edu-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:22px 24px; display:flex; gap:16px; }
+  .edu-icon { font-size:28px; flex-shrink:0; margin-top:2px; }
+  .edu-degree { font-size:15px; font-weight:700; color:var(--navy); margin-bottom:3px; }
+  .edu-spec { font-size:12px; color:var(--teal); font-weight:600; margin-bottom:4px; }
+  .edu-inst { font-size:13px; color:var(--slate); margin-bottom:4px; }
+  .edu-year { font-size:12px; color:#888; }
+  .edu-thesis { font-size:12px; color:var(--slate); margin-top:8px; font-style:italic; border-top:1px solid var(--border); padding-top:8px; }
+  .certs-bg { background:var(--light); padding:72px 0; }
+  .certs-inner { max-width:1100px; margin:0 auto; padding:0 40px; }
+  .cert-categories { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+  .cert-cat { background:var(--white); border-radius:10px; padding:24px; border:1px solid var(--border); }
+  .cert-cat h4 { font-size:13px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:1px; margin-bottom:14px; display:flex; align-items:center; gap:8px; }
+  .cert-item { display:flex; align-items:flex-start; gap:10px; padding:7px 0; border-bottom:1px solid #F0F5F7; }
+  .cert-item:last-child { border-bottom:none; }
+  .cert-dot { width:7px; height:7px; background:var(--teal); border-radius:50%; flex-shrink:0; margin-top:6px; }
+  .cert-name { font-size:13px; color:var(--slate); flex:1; }
+  .cert-date { font-size:11px; color:#888; white-space:nowrap; }
+  .conf-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; }
+  .conf-card { background:linear-gradient(135deg,var(--navy),#0d4a6b); border-radius:10px; padding:24px; color:var(--white); }
+  .conf-card.featured { background:linear-gradient(135deg,#0d4a2b,#0a6b3a); border:2px solid var(--gold); position:relative; overflow:hidden; }
+  .conf-card.featured::before { content:'★ UPCOMING'; position:absolute; top:12px; right:-24px; background:var(--gold); color:#1a1a1a; font-size:10px; font-weight:700; letter-spacing:1px; padding:4px 36px; transform:rotate(30deg); }
+  .conf-badge { display:inline-block; background:rgba(212,160,23,.25); border:1px solid var(--gold); color:var(--gold); font-size:10px; font-weight:700; letter-spacing:1px; padding:3px 10px; border-radius:10px; margin-bottom:8px; }
+  .conf-year { font-size:11px; color:#7FD8E0; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+  .conf-name { font-size:15px; font-weight:700; color:var(--white); margin-bottom:6px; }
+  .conf-venue { font-size:13px; color:#A8C8D8; }
+  .refs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .ref-card { background:var(--card); border:1px solid var(--border); border-top:4px solid var(--teal); border-radius:10px; padding:22px; }
+  .ref-name { font-size:15px; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .ref-title { font-size:12px; color:var(--teal); font-weight:600; margin-bottom:2px; }
+  .ref-org { font-size:12px; color:var(--slate); margin-bottom:12px; }
+  .ref-contact { font-size:12px; color:var(--slate); display:flex; flex-direction:column; gap:4px; }
+  .ref-contact a { color:var(--teal); text-decoration:none; }
+  footer { background:var(--navy); color:#A8C8D8; text-align:center; padding:40px; font-size:13px; }
+  footer a { color:#7FD8E0; text-decoration:none; }
+  footer .footer-links { display:flex; justify-content:center; gap:24px; margin-top:12px; flex-wrap:wrap; }
+  .divider { height:4px; background:linear-gradient(90deg,var(--navy),var(--teal),var(--navy)); }
+  @media(max-width:768px){
+    .hero h1{font-size:34px}
+    .about-grid,.skills-grid,.projects-grid,.edu-grid,.conf-grid,.refs-grid,.cert-categories,.comp-grid{grid-template-columns:1fr}
+    .conf-card.featured::before{display:none}
+    nav .nav-links{display:none}
+    .hero-stats{gap:24px}
+  }
+  .fade-in { opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">Innocent Ndagijimana, Eng.</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🇷🇼 Kigali, Rwanda &nbsp;|&nbsp; Registered Professional Engineer (IER)</div>
+    <h1>Innocent <span>Ndagijimana</span></h1>
+    <div class="hero-title">NRW Specialist · Water Asset Management Engineer · Data Analyst</div>
+    <div class="hero-tagline">Turning water system data into action — reducing non-revenue water losses, building digital assessment tools, and engineering resilient water services across Rwanda and beyond.</div>
+    <div class="hero-contacts">
+      <a href="mailto:innondag@gmail.com">✉ innondag@gmail.com</a>
+      <a href="mailto:innocent.ndagijimana@vei.nl">✉ innocent.ndagijimana@vei.nl</a>
+      <a href="tel:+250785438661">📞 +250 785 438 661</a>
+      <a href="https://www.linkedin.com/in/innocent-ndagijimana-a6b404125/" target="_blank">🔗 LinkedIn</a>
+      <a href="https://github.com/inno100sami" target="_blank">💻 GitHub</a>
+    </div>
+    <div class="hero-portfolio">
+      <span>🌐 Full Portfolio</span>
+      <a href="https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/" target="_blank">https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
+      <div class="stat"><div class="stat-num">€431K</div><div class="stat-label">Funding Secured</div></div>
+      <div class="stat"><div class="stat-num">10</div><div class="stat-label">Districts Supported</div></div>
+      <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Certifications</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Degrees</div></div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header fade-in">
+    <div class="section-label">Who I Am</div>
+    <div class="section-title">About Me</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="about-grid fade-in">
+    <div class="about-text">
+      <p>I am a <strong>Registered Professional Engineer</strong> (IER Reg. A1093/EC/IER/2019) with over 10 years of multidisciplinary experience across civil engineering, water supply infrastructure, <strong>Non-Revenue Water (NRW) management</strong>, environmental GIS, and data science.</p>
+      <p>Currently serving as <strong>Operations Engineer at VEI B.V.</strong> (Dutch Water Operators) on the USAID-funded <em>Thrive WASH – Isoko y'Ubuzima</em> programme, I coordinate NRW reduction strategies and private operator capacity building across 10 districts in Rwanda.</p>
+      <p>What sets me apart is my ability to bridge <strong>deep field engineering</strong> with <strong>advanced data science</strong> — I build Python-based assessment tools and interactive HTML dashboards that transform raw operational data into management decisions. My <a href="https://github.com/inno100sami" target="_blank" style="color:var(--teal)">GitHub (inno100sami)</a> hosts tools actively used by rural water operators.</p>
+      <p>I hold three degrees including an <strong>MSc in Financial Engineering</strong> (WorldQuant University, ongoing) and an <strong>MSc in Environmental &amp; Development Studies</strong> with specialisation in GIS. My research has been accepted for poster presentation at the <strong>IWA World Water Congress &amp; Exhibition 2026</strong> in Glasgow, UK — the world's largest water conference.</p>
+    </div>
+    <div class="about-highlights">
+      <div class="highlight-card"><div class="hl-num">€431,000</div><div class="hl-text">Project funding secured through Water for Life Foundation (SCALE/WATERWORX project), implemented by VEI B.V. in partnership with WASAC via WOP</div></div>
+      <div class="highlight-card"><div class="hl-num">10 Districts</div><div class="hl-text">Represented USAID Thrive WASH at government sector working groups and JADF planning meetings</div></div>
+      <div class="highlight-card"><div class="hl-num">3 Conferences</div><div class="hl-text">Poster accepted at IWA WWCE2026 Glasgow; presented at IWA-ASPIRE Christchurch (2025) and UNC Water & Health USA (2024)</div></div>
+      <div class="highlight-card"><div class="hl-num">Python Tools</div><div class="hl-text">Developed NRW assessment tools & interactive HTML dashboards replacing manual Excel workbooks for rural water operator management</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPETENCIES -->
+<div class="comp-bg">
+  <div class="comp-inner">
+    <div class="section-header fade-in">
+      <div class="section-label">What I Do</div>
+      <div class="section-title">Core Competencies</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="comp-grid fade-in">
+      <div class="comp-card"><div class="comp-icon">💧</div><div class="comp-name">NRW Reduction & Leakage Control</div></div>
+      <div class="comp-card"><div class="comp-icon">🏗️</div><div class="comp-name">Water Supply Asset Management</div></div>
+      <div class="comp-card"><div class="comp-icon">📐</div><div class="comp-name">DMA Design & Pressure Management</div></div>
+      <div class="comp-card"><div class="comp-icon">🔧</div><div class="comp-name">Hydraulic Network Modelling</div></div>
+      <div class="comp-card"><div class="comp-icon">🗺️</div><div class="comp-name">GIS Spatial Analysis</div></div>
+      <div class="comp-card"><div class="comp-icon">⚖️</div><div class="comp-name">IWA Water Balance Methodology</div></div>
+      <div class="comp-card"><div class="comp-icon">🐍</div><div class="comp-name">Python Data Analysis & Dashboards</div></div>
+      <div class="comp-card"><div class="comp-icon">👥</div><div class="comp-name">Private Operator Capacity Building</div></div>
+      <div class="comp-card"><div class="comp-icon">📊</div><div class="comp-name">WASH Programme M&amp;E &amp; Reporting</div></div>
+      <div class="comp-card"><div class="comp-icon">🌍</div><div class="comp-name">Climate-Resilient WASH</div></div>
+      <div class="comp-card"><div class="comp-icon">📋</div><div class="comp-name">Project &amp; Proposal Management</div></div>
+      <div class="comp-card"><div class="comp-icon">💰</div><div class="comp-name">IWRM &amp; Sustainable Finance</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-header fade-in">
+    <div class="section-label">Technical Proficiency</div>
+    <div class="section-title">Skills &amp; Tools</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-grid fade-in">
+    <div class="skill-group"><h4>🔬 NRW & Hydraulics</h4><div class="skill-item"><div class="skill-label"><span>NRW / IWA Water Balance</span><span>Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>DMA Design & Pressure Mgmt</span><span>Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>WaterGEMS / Bentley HAMMER</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>EPANET</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:83%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>Acoustic / Step Testing</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+      </div>
+    <div class="skill-group"><h4>🐍 Data Science & Python</h4><div class="skill-item"><div class="skill-label"><span>Python (Pandas, NumPy, Plotly)</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>HTML Dashboard Generation</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>Machine Learning</span><span>Intermediate</span></div><div class="skill-bar"><div class="skill-fill" style="width:68%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>Excel (Advanced)</span><span>Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>SPSS</span><span>Intermediate</span></div><div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div></div>
+      </div>
+    <div class="skill-group"><h4>🗺️ GIS & Remote Sensing</h4><div class="skill-item"><div class="skill-label"><span>QGIS</span><span>Expert</span></div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>ArcGIS Pro</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:84%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>ERDAS IMAGINE</span><span>Intermediate</span></div><div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>Spatial Analysis & Mapping</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:86%"></div></div></div>
+      <div class="skill-item"><div class="skill-label"><span>AKVO Flow (Mobile Data)</span><span>Advanced</span></div><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+      </div>
+    <div class="skill-group"><h4>🛠️ Other Tools & Frameworks</h4><div class="tag-list"><span class="tag">AutoCAD</span><span class="tag">Power BI</span><span class="tag">Git / GitHub</span><span class="tag">MS Office Suite</span><span class="tag">AKVO Flow</span><span class="tag">Google Earth Engine</span><span class="tag">Logframes / M&amp;E</span><span class="tag">BoQ Preparation</span><span class="tag">Tender Management</span><span class="tag">Donor Reporting (USAID, Water for Life Foundation)</span><span class="tag">IWA Methodology</span><span class="tag">WASH Programme Design</span><span class="tag">Asset Registers</span><span class="tag">Life-Cycle Costing</span></div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="padding-top:0">
+  <div class="section-header fade-in">
+    <div class="section-label">Career Path</div>
+    <div class="section-title">Professional Experience</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline fade-in">
+    
+    <div class="tl-item">
+      <div class="tl-dot current"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div class="tl-title">Operations Engineer</div>
+          <div class="tl-period">Dec 2021 – Present</div>
+        </div>
+        <div class="tl-org">VEI B.V. (Dutch Water Operators)</div>
+        <div class="tl-loc">📍 Kigali, Rwanda | USAID-funded Thrive WASH – Isoko y'Ubuzima Programme</div>
+        <ul class="tl-bullets">
+          <li>Lead NRW reduction strategies across 10 districts: DMA design, MNF analysis, pressure management, and data-driven monitoring for rural private water operators.</li>
+          <li>Conduct capacity assessments and deliver training on Rwanda National Water Supply Policy, NRW management, and O&amp;M standards for operators across 9 districts.</li>
+          <li>Develop Python-based monitoring tools and interactive HTML dashboards replacing manual Excel reporting for rural water operator management teams.</li>
+          <li>Co-develop process-oriented benchmarking framework for rural private water operators in Rwanda.</li>
+          <li>Write USAID monthly, quarterly, and final project narrative and financial reports; represent programme at MININFRA WATSAN sector working groups and 10-district JADF meetings.</li>
+        </ul>
+        <div class="tl-achievement">Represented programme across 10 districts at government sector working groups; built Python dashboards adopted by rural water operator management.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div class="tl-title">Young Water Expert — WATERWORX / SCALE Project</div>
+          <div class="tl-period">Jun 2020 – Jun 2022 (Part-time)</div>
+        </div>
+        <div class="tl-org">YEP-Programmes (Young Expert Programme), Netherlands</div>
+        <div class="tl-loc">📍 Rwanda / The Hague, Netherlands | Water for Life Foundation</div>
+        <ul class="tl-bullets">
+          <li>Developed two project proposals securing €431,000 in funding for NRW reduction in Rwamagana and Nyagatare WASAC branches.</li>
+          <li>Assisted WASAC in designing and creating District Metered Areas (DMAs); prepared implementation and lessons-learned reports.</li>
+          <li>Participated in international YEP masterclasses: stakeholder analysis, leadership, change management, and UN SDG alignment.</li>
+        </ul>
+        <div class="tl-achievement">Secured €431,000 in Water for Life Foundation funding through two project proposals, implemented by VEI B.V. in partnership with WASAC via WOP.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div class="tl-title">District Water and Sanitation Engineer</div>
+          <div class="tl-period">Jun 2018 – Oct 2022</div>
+        </div>
+        <div class="tl-org">Water and Sanitation Corporation (WASAC)</div>
+        <div class="tl-loc">📍 Rwanda (Multi-District)</div>
+        <ul class="tl-bullets">
+          <li>Managed water supply infrastructure rehabilitation and development: design, BoQ preparation, tendering, and construction supervision.</li>
+          <li>Promoted and implemented PPP models in Rwamagana and Kayonza districts, improving water service delivery quality.</li>
+          <li>Developed NRW monitoring tools; conducted routine audits and annual capacity-building workshops for water service providers.</li>
+        </ul>
+        <div class="tl-achievement">Implemented PPP water service models improving management in two districts.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div class="tl-title">WASH Engineer</div>
+          <div class="tl-period">Sep 2015 – Feb 2018</div>
+        </div>
+        <div class="tl-org">World Vision Rwanda</div>
+        <div class="tl-loc">📍 Gakenke District & Mahama Refugee Camp, Rwanda | UNICEF-funded</div>
+        <ul class="tl-bullets">
+          <li>Led UNICEF-funded rehabilitation of water supply systems damaged by landslides in Gakenke district.</li>
+          <li>Provided emergency WASH response at Mahama refugee camp, supplying clean water and sanitation to Burundian refugees.</li>
+          <li>Supervised contractors, prepared BoQs and technical designs; coordinated with WASAC, NGOs, and UN agencies.</li>
+        </ul>
+        <div class="tl-achievement">Successfully implemented UNICEF-funded water rehabilitation and led emergency WASH response for refugees.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div class="tl-title">PIM Coordinator — WASH Data Collection</div>
+          <div class="tl-period">Mar 2018 – May 2018</div>
+        </div>
+        <div class="tl-org">Water for People</div>
+        <div class="tl-loc">📍 Rulindo & Gicumbi Districts, Rwanda</div>
+        <ul class="tl-bullets">
+          <li>Collected and analysed post-implementation WASH data using AKVO Flow across two districts.</li>
+          <li>Produced service continuity and functionality monitoring reports following project handover.</li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="background:var(--light); padding:72px 40px; max-width:none;">
+  <div style="max-width:1100px; margin:0 auto;">
+    <div class="section-header fade-in">
+      <div class="section-label">What I've Built</div>
+      <div class="section-title">Key Projects &amp; Tools</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="projects-grid fade-in">
+      
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">📊</div>
+          <div class="proj-title">Python NRW Assessment & Monitoring Dashboard</div>
+          <div class="proj-tech">Python · Pandas · Plotly · HTML</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">A modular Python toolkit that automates IWA water balance calculations — importing production and meter data, computing real and apparent loss components, and generating interactive HTML dashboards with drill-down charts. Actively used by rural water operator management teams to replace manual Excel workbooks.</p>
+          <div class="proj-tags"><span class="proj-tag">Python</span><span class="proj-tag">Pandas</span><span class="proj-tag">Plotly</span><span class="proj-tag">IWA Balance</span><span class="proj-tag">NRW</span></div>
+          <div class="proj-links"><a class="proj-link" href="https://inno100sami.github.io/Python-NRW-Assessment-Monitoring-Dashboard/NRW_Dashboard_v3.html" target="_blank">🚀 Live Demo →</a> <a class="proj-link" href="https://github.com/inno100sami" target="_blank">💻 GitHub →</a></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">🔧</div>
+          <div class="proj-title">Hydraulic Network Performance Analysis Tool</div>
+          <div class="proj-tech">Python · EPANET API · WaterGEMS · QGIS</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">Automates extraction of EPANET/WaterGEMS simulation results (pressure, velocity, head loss) and integrates spatial outputs with QGIS for visual network performance mapping. Enables rapid identification of under-pressured zones and prioritisation of capital investment.</p>
+          <div class="proj-tags"><span class="proj-tag">EPANET</span><span class="proj-tag">WaterGEMS</span><span class="proj-tag">QGIS</span><span class="proj-tag">Python</span><span class="proj-tag">Network Analysis</span></div>
+          <div class="proj-links"><a class="proj-link" href="https://inno100sami.github.io/Karenge-Hydraulic-Network-Performance-Analysis-Tool/karenge-dashboard.html" target="_blank">🚀 Live Demo →</a> <a class="proj-link" href="https://github.com/inno100sami" target="_blank">💻 GitHub →</a></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">🗺️</div>
+          <div class="proj-title">GIS Water Access Mapping — MSc Research</div>
+          <div class="proj-tech">ArcGIS · QGIS · ERDAS IMAGINE · Spatial Analysis</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">MSc thesis research applying GIS to map and measure citizens' access to water supply in Rwamagana district. Developed spatial service coverage indices for policy and planning use. Supervised by Dr. François Xavier Nshimiyimana (WASAC Head of Research & Development).</p>
+          <div class="proj-tags"><span class="proj-tag">ArcGIS</span><span class="proj-tag">ERDAS</span><span class="proj-tag">Spatial Analysis</span><span class="proj-tag">WASAC</span><span class="proj-tag">MSc Research</span></div>
+          <div class="proj-links"><a class="proj-link" href="https://inno100sami.github.io/GIS-Water-Access-Rwamagana_2021/" target="_blank">🚀 Live Demo →</a> <a class="proj-link" href="https://github.com/inno100sami" target="_blank">💻 GitHub →</a></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">📈</div>
+          <div class="proj-title">IYU Project — NRW Reporting & Analysis Dashboard</div>
+          <div class="proj-tech">HTML · CSS · JavaScript · Data Visualisation</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">Interactive NRW reporting and analysis dashboard developed for the IYU project. Provides rural water operator managers with automated loss component breakdowns, trend analysis, and performance tracking against NRW reduction targets.</p>
+          <div class="proj-tags"><span class="proj-tag">NRW</span><span class="proj-tag">Reporting</span><span class="proj-tag">Dashboard</span><span class="proj-tag">Data Visualisation</span><span class="proj-tag">WASH</span></div>
+          <div class="proj-links"><a class="proj-link" href="https://inno100sami.github.io/IYU-PROJECT--NRW-REPORTING-ANALYSIS/NRW_Dashboard.html" target="_blank">🚀 Live Demo →</a> <a class="proj-link" href="https://github.com/inno100sami" target="_blank">💻 GitHub →</a></div>
+        </div>
+      </div>
+      <div class="proj-card">
+        <div class="proj-header">
+          <div class="proj-icon">📋</div>
+          <div class="proj-title">Private Operator Benchmarking Framework</div>
+          <div class="proj-tech">Thrive WASH / VEI · USAID-funded</div>
+        </div>
+        <div class="proj-body">
+          <p class="proj-desc">Co-developed a process-oriented benchmarking framework for rural private water operators in Rwanda. Enables structured comparison of service delivery performance, NRW levels, financial sustainability, and regulatory compliance across districts.</p>
+          <div class="proj-tags"><span class="proj-tag">USAID</span><span class="proj-tag">VEI B.V.</span><span class="proj-tag">Benchmarking</span><span class="proj-tag">NRW</span><span class="proj-tag">Rwanda</span></div>
+          <div class="proj-links"><a class="proj-link" href="https://inno100sami.github.io/Private-Operator-Benchmarking-Framework/dashboard.html" target="_blank">🚀 Live Demo →</a> <a class="proj-link" href="https://github.com/inno100sami" target="_blank">💻 GitHub →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-header fade-in">
+    <div class="section-label">Academic Background</div>
+    <div class="section-title">Education</div>
+    <div class="section-line"></div>
+  </div>
+  <div class="edu-grid fade-in">
+    
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-degree">MSc in Financial Engineering</div>
+        <div class="edu-spec">Quantitative Finance · Risk Modelling · Data Science</div>
+        <div class="edu-inst">WorldQuant University, USA (Online)</div>
+        <div class="edu-year">2024 – 2026 (Ongoing)</div>
+        
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-degree">MSc in Environmental & Development Studies</div>
+        <div class="edu-spec">Specialisation: Environmental Information Systems (GIS)</div>
+        <div class="edu-inst">University of Lay Adventist of Kigali (UNILAK), Rwanda</div>
+        <div class="edu-year">2019 – 2022</div>
+        <div class="edu-thesis">Thesis: "Application of GIS for mapping and measuring citizens' access to water supply in Rwamagana district" — Supervisor: Dr. François Xavier Nshimiyimana, WASAC</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">🏛️</div>
+      <div>
+        <div class="edu-degree">BSc in Civil Engineering</div>
+        <div class="edu-spec">Hydraulics · Water Resources · Geotechnics · Project Management</div>
+        <div class="edu-inst">University of Rwanda – College of Science and Technology (former NUR)</div>
+        <div class="edu-year">2011 – 2015</div>
+        <div class="edu-thesis">Thesis: "River flood control management, case of Sebeya River" — Supervisor: Prof. Omar Munyaneza, WASAC Group CEO</div>
+      </div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">📜</div>
+      <div>
+        <div class="edu-degree">Diploma in Project Management</div>
+        <div class="edu-spec">QLS Level 5</div>
+        <div class="edu-inst">Oxford Home Study College, UK</div>
+        <div class="edu-year">April 2024</div>
+        
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:28px; background:linear-gradient(135deg,var(--navy),#0d4a6b); border-radius:12px; padding:24px 30px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;" class="fade-in">
+    <div style="font-size:36px;">🏅</div>
+    <div style="flex:1;">
+      <div style="font-size:14px; font-weight:700; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-bottom:4px;">Professional Registration</div>
+      <div style="font-size:18px; font-weight:700; color:var(--white);">Registered Professional Engineer — Institution of Engineers Rwanda (IER)</div>
+      <div style="font-size:13px; color:#A8C8D8; margin-top:4px;">Registration No. A1093/EC/IER/2019 &nbsp;|&nbsp; Civil Engineering &nbsp;|&nbsp; Admitted 9 Sept 2019 &nbsp;|&nbsp; Issued 20 April 2020</div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<div class="certs-bg" id="certifications">
+  <div class="certs-inner">
+    <div class="section-header fade-in">
+      <div class="section-label">Continuous Learning</div>
+      <div class="section-title">Certifications &amp; CPD</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="cert-categories fade-in">
+      <div class="cert-cat"><h4>🐍 Data Science & Technology</h4><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Applied Data Science Lab — WorldQuant University</div><div class="cert-date">Sep 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Foundations of Financial Engineering — WorldQuant University</div><div class="cert-date">Feb 2025</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">AI Career Essentials (AICE) — ALX / African Leadership Group</div><div class="cert-date">Jun 2024</div></div></div>
+      <div class="cert-cat"><h4>💧 Water, WASH & NRW</h4><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Water Safety Plan — IWA / IRC</div><div class="cert-date">Nov 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Introduction to Household Water Treatment & Safe Storage</div><div class="cert-date">Oct 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Sustainable Public Water Supply (SPWS) — IRC WASH Academy</div><div class="cert-date">Jun 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Water Supply & Sanitation Policy — University of Manchester</div><div class="cert-date">Aug 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Water Supply & Sanitation I & II — IHE Delft</div><div class="cert-date">Jun–Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">GIS for Water Management — IHE Delft</div><div class="cert-date">Feb 2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">QGIS Water Modeller</div><div class="cert-date">Dec 2019</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">IWRM — Cap-Net UNDP</div><div class="cert-date">Jul 2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">WASH in Schools — Emory University / UNICEF</div><div class="cert-date">2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">ISO 30500 & ISO24521: Non-Sewered Sanitation Standards</div><div class="cert-date">2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Climate Resilience WASH</div><div class="cert-date">Dec 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Health and Safety Diploma</div><div class="cert-date">Nov 2024</div></div></div>
+      <div class="cert-cat"><h4>🌱 Climate Change & Sustainability</h4><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Introduction to Sustainable Finance — PAGE / UN</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Sustainable Finance</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Cities and Climate Change</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Climate Change and Mitigation</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Climate Change International Legal Regime</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Companies and Climate Change</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Corporate Finance and Environment</div><div class="cert-date">Jul 2024</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Health and Climate Change</div><div class="cert-date">Jul 2024</div></div></div>
+      <div class="cert-cat"><h4>🎯 Leadership & YEP Programme</h4><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Project Proposal Writing — YEP, The Hague</div><div class="cert-date">Jan 2026</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">YEP Alumnus Certificate</div><div class="cert-date">Aug 2022</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Monitoring & Evaluation (M&E) — YEP</div><div class="cert-date">Oct 2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Stakeholder Analysis Masterclass — YEP, The Hague</div><div class="cert-date">Apr 2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Leadership Experiences & Hierarchy Issues — YEP, The Hague</div><div class="cert-date">Jun 2021</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Change Management Masterclass — YEP</div><div class="cert-date">Oct 2020</div></div><div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Project Management Diploma QLS Level 5 — Oxford HSC</div><div class="cert-date">Apr 2024</div></div></div>
+    </div>
+    <!-- Conferences -->
+    <div style="margin-top:36px;">
+      <div class="section-header fade-in" style="margin-bottom:24px;">
+        <div class="section-label">Global Presence</div>
+        <div class="section-title">International Conferences</div>
+        <div class="section-line"></div>
+      </div>
+      <div class="conf-grid fade-in">
+        <div class="conf-card featured"><div class="conf-badge">POSTER ACCEPTED</div><div class="conf-year" style="color:var(--gold);">4–8 October 2026</div><div class="conf-name">IWA World Water Congress & Exhibition 2026</div><div class="conf-venue">📍 Glasgow, UK&nbsp;|&nbsp; <a href="https://worldwatercongress.org/" target="_blank" style="color:#7FD8E0;">worldwatercongress.org</a></div><div style="margin-top:10px; font-size:12px; color:#A8D8B0; font-style:italic; border-top:1px solid rgba(255,255,255,.15); padding-top:8px;">Paper ID 7130467 — "Benefits Of The House-to-House Survey For Non-Revenue Water Reduction In The Rural Water Supply In Rwanda"</div></div>
+        <div class="conf-card"><div class="conf-year" >September 2025</div><div class="conf-name">IWA-ASPIRE Conference & Water New Zealand Expo</div><div class="conf-venue">📍 Christchurch, New Zealand</div></div>
+        <div class="conf-card"><div class="conf-year" >October 2024</div><div class="conf-name">UNC Water and Health Conference</div><div class="conf-venue">📍 University of North Carolina, USA</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LANGUAGES -->
+<section>
+  <div class="section-header fade-in">
+    <div class="section-label">Communication</div>
+    <div class="section-title">Languages</div>
+    <div class="section-line"></div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;" class="fade-in">
+    <div class="comp-card"><div class="comp-icon">🇷🇼</div><div class="comp-name" style="font-size:15px;margin-bottom:4px;">Kinyarwanda</div><div style="font-size:12px;color:#888;">Native</div></div>
+    <div class="comp-card"><div class="comp-icon">🇬🇧</div><div class="comp-name" style="font-size:15px;margin-bottom:4px;">English</div><div style="font-size:12px;color:#888;">Professional Proficiency</div></div>
+    <div class="comp-card"><div class="comp-icon">🇫🇷</div><div class="comp-name" style="font-size:15px;margin-bottom:4px;">French</div><div style="font-size:12px;color:#888;">Working Knowledge</div></div>
+    <div class="comp-card"><div class="comp-icon">🌍</div><div class="comp-name" style="font-size:15px;margin-bottom:4px;">Kiswahili</div><div style="font-size:12px;color:#888;">Intermediate</div></div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<div style="background:var(--light); padding:72px 0;" id="references">
+  <div style="max-width:1100px; margin:0 auto; padding:0 40px;">
+    <div class="section-header fade-in">
+      <div class="section-label">Professional Network</div>
+      <div class="section-title">References</div>
+      <div class="section-line"></div>
+    </div>
+    <div class="refs-grid fade-in">
+      
+      <div class="ref-card">
+        <div class="ref-name">Dr Asaph Kabaasha</div>
+        <div class="ref-title">Chief Executive Officer</div>
+        <div class="ref-org">WASAC Group, Rwanda</div>
+        <div class="ref-contact">
+          <span>📞 +250 788 305 793</span>
+          <a href="mailto:akabaasha@wasac.rw">✉ akabaasha@wasac.rw</a>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-name">Dr Mireia Tutusaus</div>
+        <div class="ref-title">Regional Manager</div>
+        <div class="ref-org">VEI B.V.</div>
+        <div class="ref-contact">
+          <span>📞 +31 634 025 635</span>
+          <a href="mailto:mireia.tutusaus@vei.nl">✉ mireia.tutusaus@vei.nl</a>
+        </div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-name">Clement Ndungutse</div>
+        <div class="ref-title">Project Manager</div>
+        <div class="ref-org">VEI B.V.</div>
+        <div class="ref-contact">
+          <span>📞 +250 788 748 028</span>
+          <a href="mailto:clement.ndungutse@vei.nl">✉ clement.ndungutse@vei.nl</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-size:22px; font-weight:700; color:var(--white); margin-bottom:8px;">Innocent Ndagijimana, Eng.</div>
+  <div>NRW Specialist · Water Asset Management · Data Analyst · Kigali, Rwanda</div>
+  <div style="margin-top:8px; color:#7FD8E0;">Registered Professional Engineer — IER No. A1093/EC/IER/2019</div>
+  <div style="margin-top:10px;">
+    <a href="https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/" target="_blank" style="color:var(--gold); font-weight:600; font-size:13px;">
+      🌐 https://inno100sami.github.io/Innocent-Ndagijimana-Portfolio/
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="mailto:innondag@gmail.com">✉ innondag@gmail.com</a>
+    <a href="tel:+250785438661">📞 +250 785 438 661</a>
+    <a href="https://www.linkedin.com/in/innocent-ndagijimana-a6b404125/" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/inno100sami" target="_blank">💻 GitHub</a>
+  </div>
+  <div style="margin-top:20px; font-size:11px; color:#5A8090;">© 2026 Innocent Ndagijimana. All rights reserved.</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.style.width;
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skills-grid').forEach(el => barObserver.observe(el));
+</script>
+</body>
+</html>
